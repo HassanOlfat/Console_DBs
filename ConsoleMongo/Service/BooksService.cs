@@ -21,11 +21,8 @@ namespace console
         {
             if (_con.getConnectionType() == ConnectionType.mongo)
             {
-                MongoClient client = new MongoClient(_con.getConnection());
-                var database = client.GetDatabase(_con.getDatabasename());
-
-                var collection = database.GetCollection<BsonDocument>("Books");
-
+                MongoConnection mongoCon = new MongoConnection();
+                var collection=  mongoCon.getCollection("Books");
                 var firstDocument = collection.Find(new BsonDocument()).FirstOrDefault();
                 _books = BsonSerializer.Deserialize<Books>(firstDocument);
                 return _books;

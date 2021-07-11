@@ -62,6 +62,23 @@ namespace Common
 
             return dbList;
         }
+        public IMongoDatabase getDatabase()
+        {
+            MongoClient client = new MongoClient(getConnection());
+            var database = client.GetDatabase(getDatabasename());
 
+
+            return database;
+        }
+
+        public IMongoCollection<BsonDocument> getCollection(string collectionName)
+        {
+           
+
+            var collection = getDatabase().GetCollection<BsonDocument>(collectionName);
+
+            return collection;
+        }
+        
     }
 }
