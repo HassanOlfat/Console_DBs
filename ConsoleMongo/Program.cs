@@ -34,7 +34,12 @@ namespace console
             Console.WriteLine("*********** First Book ********* \n");
             Console.WriteLine("Title : {0}", firstBook.title);
             Console.WriteLine("ISBN : {0}", firstBook.isbn);
-            
+            Console.WriteLine("Authors : ");
+
+            foreach (var item in firstBook.authors)
+            {
+                Console.WriteLine("\t {0}",item);
+            }
             Console.ReadKey();
         }
 
