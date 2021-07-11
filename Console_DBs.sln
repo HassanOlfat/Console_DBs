@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "console", "ConsoleMongo\console.csproj", "{A1F52B0E-31F3-4DE8-9DEE-676F7133D6A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{07C37F62-804B-434C-82E3-4235FB1E7FD0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBs", "DBs", "{5437F294-0CCD-496C-B808-756DB9EEAB24}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\Books.json = ..\..\..\Desktop\Books.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1F52B0E-31F3-4DE8-9DEE-676F7133D6A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1F52B0E-31F3-4DE8-9DEE-676F7133D6A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1F52B0E-31F3-4DE8-9DEE-676F7133D6A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1F52B0E-31F3-4DE8-9DEE-676F7133D6A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07C37F62-804B-434C-82E3-4235FB1E7FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07C37F62-804B-434C-82E3-4235FB1E7FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07C37F62-804B-434C-82E3-4235FB1E7FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07C37F62-804B-434C-82E3-4235FB1E7FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7619919F-F1C6-443F-9F7F-BE36E35C015F}
+	EndGlobalSection
+EndGlobal
