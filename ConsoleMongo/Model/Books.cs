@@ -18,8 +18,8 @@ namespace console
         public string shortDescription { get; set; }
         public string longDescription { get; set; }
         public string status { get; set; }
-        public List<string> authors { get; set; }
-        public List<string> categories { get; set; }
+        public IEnumerable<string> authors { get; set; }
+        public IEnumerable<string> categories { get; set; }
 
     }
 }

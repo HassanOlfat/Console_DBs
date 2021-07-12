@@ -13,7 +13,7 @@ namespace Common
         string getUserName();
         string getPassword();
         ConnectionType getConnectionType();
-        string getConnection();
+        string getConnectionString();
         bool getPing();
     }
 }

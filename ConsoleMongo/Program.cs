@@ -9,26 +9,39 @@ using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Reflection.Metadata;
 using Common;
+using System.Threading.Tasks;
 
 namespace console
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
+            Console.WriteLine(" Please enter your Database Type name (Ex: sql , mongo) :  \n");
+            Console.WriteLine(" Default Database : mongo  \n");
 
-            IConnectionString mongo = new MongoConnection();
+            string command = Console.ReadLine();
 
-            Console.WriteLine("*********** Connection Test ********* \n");
+            
+            IConnectionString db=null;
 
-            Console.WriteLine("pingMongo : " + mongo.getPing());
+            if (command.ToLower()=="sql")
+            {
+                 db = new SqlServerConnection();
+                Console.WriteLine("*********** Swich to SQL SERVER ********* \n");
+            }
+            else 
+            {
+                db = new MongoConnection();
+                Console.WriteLine("*********** Swich to MongoDB ********* \n");
+                Console.WriteLine("*********** Connection Test ********* \n");
+                Console.WriteLine("pingMongo : " + db.getPing());
 
-            BooksService bs = new BooksService(mongo);
-
-
+            }
             Console.WriteLine("\n \n");
 
-            var firstBook = bs.FindAsync();
+            BooksService bs = new BooksService(db);
+            var firstBook = await bs.FindAsync();
 
 
             Console.WriteLine("*********** First Book ********* \n");

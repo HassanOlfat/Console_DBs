@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "console", "ConsoleMongo\console.csproj", "{A1F52B0E-31F3-4DE8-9DEE-676F7133D6A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{07C37F62-804B-434C-82E3-4235FB1E7FD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{07C37F62-804B-434C-82E3-4235FB1E7FD0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBs", "DBs", "{5437F294-0CCD-496C-B808-756DB9EEAB24}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db", "db", "{A1C01F47-76E0-423B-85C3-9001A1319DF3}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\Desktop\Books.json = ..\..\..\Desktop\Books.json
+		DBs\Books.json = DBs\Books.json
 	EndProjectSection
 EndProject
 Global

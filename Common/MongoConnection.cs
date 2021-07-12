@@ -32,7 +32,7 @@ namespace Common
             return null;
         }
 
-        public string getConnection()
+        public string getConnectionString()
         {
 
             if (getUserName() == null) return getAddress();
@@ -44,7 +44,7 @@ namespace Common
 
         public bool getPing()
         {
-            MongoClient client = new MongoClient(getConnection());
+            MongoClient client = new MongoClient(getConnectionString());
             var database = client.GetDatabase(getDatabasename());
 
             bool isMongoLive = database.RunCommandAsync((Command<BsonDocument>)"{ping:1}").Wait(1000);
@@ -53,18 +53,17 @@ namespace Common
         }
 
 
-        public List<BsonDocument> getDatabasNames()
+        public async Task<List<BsonDocument>> getDatabasNamesAsync()
         {
-            MongoClient client = new MongoClient(getConnection());
-            var database = client.GetDatabase(getDatabasename());
+            MongoClient client = new MongoClient(getConnectionString());
 
-            var dbList = client.ListDatabases().ToList();
+            var dbList = await client.ListDatabasesAsync();
 
-            return dbList;
+            return dbList.ToList();
         }
-        public IMongoDatabase getDatabase()
+        public  IMongoDatabase getDatabase()
         {
-            MongoClient client = new MongoClient(getConnection());
+            MongoClient client = new MongoClient(getConnectionString());
             var database = client.GetDatabase(getDatabasename());
 
 
