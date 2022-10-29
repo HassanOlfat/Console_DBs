@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Common
 {
     public class MongoConnection : IConnectionString
-    {
+    {//
         public string getAddress()
         {
             return "mongodb://localhost:27017";
